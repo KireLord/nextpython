@@ -1,5 +1,9 @@
 # Proyecto de Reporte de Mejores Jugadores
 
+## Implemetacion por
+- Erick Rosero
+- Gustavo Guevara
+
 Este proyecto es una aplicación web construida con Next.js y TypeScript que muestra un reporte de los mejores jugadores. La aplicación incluye un fondo animado de partículas utilizando la biblioteca Three.js.
 
 ## Instala las dependencias
