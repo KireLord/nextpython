@@ -1,33 +1,97 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* src/app/globals.css */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  overflow: hidden; /* Asegúrate de que el fondo se muestra completamente */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+html, body, #__next {
+  height: 100%;
+}
+
+.animated-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(33, 37, 41, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1; /* Asegúrate de que el contenedor esté por encima del fondo */
+  animation: fadeIn 2s ease-in-out;
+  border: 1px solid #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  margin-top: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.centered-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.centered-form .form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem; /* Añade espacio entre los elementos del formulario */
+}
+
+.centered-form .form-input {
+  width: 100%;
+}
+
+.styled-button {
+  background-color: #6c757d; /* Color gris */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  margin-top: 10px; /* Añade espacio encima del botón */
+}
+
+.styled-button:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+.styled-button:active {
+  background-color: #545b62;
+  transform: scale(0.95);
 }
